@@ -1,4 +1,4 @@
 /Model/data
-
+/frontEnd/node_modules
 /Model/Pipfile.lock
 /frontEnd/test.txt
