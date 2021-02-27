@@ -1,5 +1,6 @@
 import './App.css';
 import Upload from './Upload.js';
+import ImageBox from './ImageBox'
 import { useState } from 'react'
 
 function App() {
@@ -13,9 +14,9 @@ function App() {
 
       {/* <!-- Header --> */}
       <header class="w3-panel w3-center w3-opacity">
-        <h1 class="w3-xlarge">Introducing</h1>
         <h1>Chroma</h1>
-        
+      </header >
+      <header class="w3-panel w3-center w3-opacity">
         <div class="w3-padding-32">
           <div class="w3-bar w3-border">
             <p  class="w3-bar-item w3-button">About</p>
@@ -24,23 +25,11 @@ function App() {
           </div>
         </div>
       </header>
-
-      {/* <!-- Photo Grid --> */}
-      <div class="w3-row-padding w3-grayscale">
-        <div class="w3-half">
-            <img src={image.preview} alt="dummy" width="300" height="300" />
-        </div>
-
-        <div class="w3-half">
-          
-        </div>
-      </div>
         
-
-{/* //Upload Button */}
-<div>
-  <Upload updateImage={updateImage}/>
-</div>
+  <div>
+  < ImageBox image={image.preview} />
+    <Upload updateImage={updateImage}/> 
+  </div>
 
 {/* //end page */}
 </div>
