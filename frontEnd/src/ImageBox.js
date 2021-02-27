@@ -5,14 +5,14 @@ import React from 'react'
 function ImageBox ({image}) {
     return (
         <div class="w3-row-padding">
-        <div class="w3-half">
-            <img src={image} alt="" width="300" height="300" />
-        </div>
+            <div class="w3-half">
+                <img src={image} alt="" width="400" height="300" />
+            </div>
 
-        <div class="right">
-            <img src={image} alt="" width="300" height="300" />
+            <div class="right">
+                <img src={image} alt="" width="400" height="300" />
+            </div>
         </div>
-      </div>
     )
 }
 
