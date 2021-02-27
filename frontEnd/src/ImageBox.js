@@ -4,12 +4,12 @@ import React from 'react'
 
 function ImageBox ({image}) {
     return (
-        <div class="w3-row-padding">
-            <div class="w3-half">
+        <div className="w3-row-padding">
+            <div className="w3-half w3-row-padding" >
                 <img src={image} alt="" width="400" height="300" />
             </div>
 
-            <div class="right">
+            <div className="right w3-row-padding">
                 <img src={image} alt="" width="400" height="300" />
             </div>
         </div>

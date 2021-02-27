@@ -5,7 +5,7 @@ function Upload({updateImage}) {
 
     return (<div>
         <label htmlFor="uploadButton">       
-              <h5  class="button" style={{verticalAlign:"middle"}}><span>Upload</span></h5>
+              <h5  className="button" style={{verticalAlign:"middle"}}><span>Upload</span></h5>
         </label>
         <input
           type="file"
