@@ -1,37 +1,27 @@
 import './App.css';
+import Upload from './Upload.js';
+import ImageBox from './ImageBox.js'
+import Nav from './Nav.js'
+import Header from './Header.js'
+import Footer from './Footer'
+import { useState } from 'react'
 
 function App() {
+  const [image, setImage] = useState({ preview: "", raw: ""})
+  const updateImage = (e) => {
+    setImage({  preview: URL.createObjectURL(e.target.files[0]),
+                raw: e.target.files[0]})
+  }
   return (
-    <div class="w3-content">
+       
+  <div>
+    <Header />
+    <Nav />
+    <ImageBox image={image.preview} />
+    <Upload updateImage={updateImage}/> 
+    <Footer />
+  </div>
 
-      {/* <!-- Header --> */}
-      <header class="w3-panel w3-center w3-opacity">
-        <h1 class="w3-xlarge">PHOTOGRAPHER</h1>
-        <h1>John Doe</h1>
-        
-        <div class="w3-padding-32">
-          <div class="w3-bar w3-border">
-            <p  class="w3-bar-item w3-button">Home</p>
-            <p  class="w3-bar-item w3-button w3-light-grey">Portfolio</p>
-            <p class="w3-bar-item w3-button">Contact</p>
-            <p class="w3-bar-item w3-button w3-hide-small">Weddings</p>
-          </div>
-        </div>
-      </header>
-
-      {/* <!-- Photo Grid --> */}
-      <div class="w3-row-padding w3-grayscale">
-        <div class="w3-half">
-          
-        </div>
-
-        <div class="w3-half">
-          
-        </div>
-      </div>
-        
-{/* <!-- End Page Content --> */}
-</div>
   );
 
 }

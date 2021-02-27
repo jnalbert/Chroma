@@ -283,6 +283,7 @@
 .w3-row-padding > .w3-quarter,
 .w3-row-padding > .w3-col {
   padding: 0 8px;
+  padding-left: 20%;
 }
 
 
@@ -392,4 +393,7 @@
 .w3-row-padding .w3-grayscale{
   margin-bottom:128px
 }
+
+
+
 
