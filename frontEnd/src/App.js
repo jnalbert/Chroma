@@ -1,7 +1,13 @@
 import './App.css';
 import Upload from './Upload.js';
+import { useState } from 'react'
 
 function App() {
+  const [image, setImage] = useState({ preview: "", raw: ""})
+  const updateImage = (e) => {
+    setImage({  preview: URL.createObjectURL(e.target.files[0]),
+                raw: e.target.files[0]})
+  }
   return (
     <div class="w3-content">
 
@@ -22,6 +28,7 @@ function App() {
       {/* <!-- Photo Grid --> */}
       <div class="w3-row-padding w3-grayscale">
         <div class="w3-half">
+            <img src={image.preview} alt="dummy" width="300" height="300" />
         </div>
 
         <div class="w3-half">
@@ -32,7 +39,7 @@ function App() {
 
 {/* //Upload Button */}
 <div>
-  <Upload/>
+  <Upload updateImage={updateImage}/>
 </div>
 
 {/* //end page */}
