@@ -306,6 +306,9 @@
   float: left;
   width: 100%;
 }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 .w3-col.m6,
 .w3-half {
     width: 49.99999%;
