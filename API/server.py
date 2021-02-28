@@ -14,10 +14,8 @@ def colorize():
 	file = request.files['image'].read() ## byte file
 	npimg = np.fromstring(file, np.uint8)
 	img = cv2.imdecode(npimg,cv2.IMREAD_COLOR)
-	######### Do preprocessing here ################
-	# img[img > 150] = 0
-	## any random stuff do here
-	################################################
+	
+
 	img = Image.fromarray(img.astype("uint8"))
 	rawBytes = io.BytesIO()
 	img.save(rawBytes, "JPEG")
