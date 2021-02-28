@@ -8,7 +8,7 @@ import base64
 
 server = Flask(__name__)
 
-@server.route('/colorize', methods=['GET', 'POST'])
+@server.route('/colorize', methods=['POST'])
 def colorize():
     # print(request.files , file=sys.stderr)
 	file = request.files['image'].read() ## byte file
