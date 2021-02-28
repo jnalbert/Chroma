@@ -14,6 +14,7 @@ matplotlib = "*"
 opencv-python = "*"
 sklearn = "*"
 scikit-image = "*"
+jupyter = "*"
 
 [requires]
 python_version = "3.8"
