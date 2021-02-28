@@ -5,11 +5,11 @@ async function colorizeImage(formData) {
         method: 'post',
         url: 'http://localhost:5000/colorize',
         headers: {
-            
-        }
+            "Content-Type": 'multipart/form-data'
+        },
         data: {
-          firstName: 'Fred',
-          lastName: 'Flintstone'
+            imgData: formData
         }
       });
+    return response
 }
