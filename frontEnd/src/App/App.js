@@ -5,20 +5,29 @@ import Nav from '../Nav/Nav.js'
 import Header from '../Header/Header.js'
 import Footer from '../Footer/Footer'
 import { useState } from 'react'
+import colorizeImage from '../Util.js'
 
 function App() {
-  const [image, setImage] = useState({ preview: "", raw: ""})
+  const [imageUpload, setImageUpload] = useState({ preview: "", raw: ""})
+  const [imageDownload, setImageDownload] = useState({ preview: "", raw: ""})
+
   const updateImage = (e) => {
-    setImage({  preview: URL.createObjectURL(e.target.files[0]),
+    setImageUpload({  preview: URL.createObjectURL(e.target.files[0]),
                 raw: e.target.files[0]})
+  }
+
+  const handleUploadToServer = async (e) => {
+    // e.preventDefault();
+    const b64 = window.btoa(imageUpload.raw)
+    const response = await colorizeImage(b64)
   }
   return (
        
   <div>
     <Header />
     <Nav />
-    <ImageBox image={image.preview} />
-    <Upload updateImage={updateImage}/> 
+    <ImageBox imageUpload={imageUpload.preview} imageDownload={imageDownload.preview} />
+    <Upload updateImage={updateImage} handleUploadToServer={handleUploadToServer} /> 
     <Footer />
   </div>
 
