@@ -8,7 +8,7 @@ function Nav(props) {
                 <div className="w3-padding-32">
                 <div className="w3-bar w3-border">
                     <p  className="w3-bar-item w3-button">Portfolio</p>
-                    <p className="w3-bar-item w3-button">Try Yourself!</p>
+                    <p className="w3-bar-item w3-button">Colorize Photo</p>
                 </div>
                 </div>
             </header>

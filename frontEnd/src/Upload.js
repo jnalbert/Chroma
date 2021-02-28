@@ -4,7 +4,7 @@ import StartColor from './StartColor.js'
 
 function Upload({updateImage}) {
 
-    return (<div style={{display: "inline-flex", transform:  `translate(130px, -200px)`}}>
+    return (<div style={{display: "inline-flex", transform:  `translate(80px, -200px)`}}>
         <label htmlFor="uploadButton">       
               <h5  className="button" style={{verticalAlign:"middle"}}><span>Upload</span></h5>
         </label>

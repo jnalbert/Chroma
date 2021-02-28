@@ -1,7 +1,7 @@
 .startButton {
     display: inline-block;
     border-radius: 4px;
-    background-color: blueviolet;
+    background: -webkit-linear-gradient(#3a1c71, #d76d77, #ffaf7b);
     border: none;
     color: #FFFFFF;
     text-align: center;
