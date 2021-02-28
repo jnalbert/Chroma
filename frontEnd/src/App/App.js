@@ -1,9 +1,9 @@
 import './App.css';
-import Upload from './Upload.js';
-import ImageBox from './ImageBox.js'
-import Nav from './Nav.js'
-import Header from './Header.js'
-import Footer from './Footer'
+import Upload from '../Upload/Upload.js';
+import ImageBox from '../ImageBox/ImageBox.js'
+import Nav from '../Nav/Nav.js'
+import Header from '../Header/Header.js'
+import Footer from '../Footer/Footer'
 import { useState } from 'react'
 
 function App() {

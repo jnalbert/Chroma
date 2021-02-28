@@ -1,7 +1,7 @@
-.button {
+.startButton {
     display: inline-block;
     border-radius: 4px;
-    background-color: #1e45f4;
+    background: -webkit-linear-gradient(#3a1c71, #d76d77, #ffaf7b);
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -13,14 +13,14 @@
     margin: 5px;
   }
   
-  .button span {
+  .startButton span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
   
-  .button span:after {
+  .startButton span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -29,12 +29,11 @@
     transition: 0.5s;
   }
   
-  .button:hover span {
+  .startButton:hover span {
     padding-right: 25px;
   }
   
-  .button:hover span:after {
+  .startButton:hover span:after {
     opacity: 1;
     right: 0;
   }
-

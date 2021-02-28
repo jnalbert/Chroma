@@ -1,7 +1,7 @@
-.startButton {
+.button {
     display: inline-block;
     border-radius: 4px;
-    background-color: blueviolet;
+    background: #185a9d;
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -13,14 +13,14 @@
     margin: 5px;
   }
   
-  .startButton span {
+  .button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
   
-  .startButton span:after {
+  .button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -29,11 +29,12 @@
     transition: 0.5s;
   }
   
-  .startButton:hover span {
+  .button:hover span {
     padding-right: 25px;
   }
   
-  .startButton:hover span:after {
+  .button:hover span:after {
     opacity: 1;
     right: 0;
   }
+

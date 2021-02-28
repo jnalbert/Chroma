@@ -1,0 +1,5 @@
+.image-scale {
+        width: 550px;
+        height: 400px;
+        object-fit: contain;
+}
