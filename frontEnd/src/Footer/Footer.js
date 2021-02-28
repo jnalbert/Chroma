@@ -1,4 +1,4 @@
-import './App.css'
+import '../App/App.css'
 import './Footer.css'
 import React from 'react'
 

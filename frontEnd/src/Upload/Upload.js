@@ -1,6 +1,6 @@
 import React from "react"
 import './Upload.css'
-import StartColor from './StartColor.js'
+import StartColor from '../StartColor/StartColor.js'
 
 function Upload({updateImage}) {
 

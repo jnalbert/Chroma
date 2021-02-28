@@ -1,4 +1,4 @@
-import './App.css'
+import '../App/App.css'
 import './ImageBox.css'
 import React from 'react'
 import frame from './frame.png'
