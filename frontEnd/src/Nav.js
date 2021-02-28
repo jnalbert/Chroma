@@ -3,7 +3,7 @@ import './App.css'
 
 function Nav(props) {
     return (
-        <div className="w3-content">
+        <div style={{transform: `translateY(-130px)`}} className="w3-content">
             <header className="w3-panel w3-center w3-opacity">
                 <div className="w3-padding-32">
                 <div className="w3-bar w3-border">

@@ -1,9 +1,10 @@
 import React from "react"
 import './Upload.css'
+import StartColor from './StartColor.js'
 
 function Upload({updateImage}) {
 
-    return (<div>
+    return (<div style={{display: "inline-flex", transform:  `translate(130px, -200px)`}}>
         <label htmlFor="uploadButton">       
               <h5  className="button" style={{verticalAlign:"middle"}}><span>Upload</span></h5>
         </label>
@@ -14,6 +15,7 @@ function Upload({updateImage}) {
           onChange={updateImage}
         />
         <br />
+        <StartColor />
       </div>)
 
 }
