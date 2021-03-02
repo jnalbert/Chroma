@@ -15,7 +15,7 @@ function Upload({updateImage, handleUploadToServer, imageUpload}) {
           onChange={updateImage}
         />
         <br />
-        <button onClick={handleUploadToServer()} className="startButton" style={{verticalAlign:"middle"}}><span>Colorize</span></button>
+        <button onClick={handleUploadToServer} className="startButton" style={{verticalAlign:"middle"}}><span>Colorize</span></button>
       </div>)
 
 }

@@ -1,6 +1,6 @@
 from flask import Flask, render_template , request , jsonify
 from PIL import Image
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 import os , io , sys
 import numpy as np 
 import cv2
@@ -8,13 +8,15 @@ import base64
 
 
 server = Flask(__name__)
-CORS(server)
+cors = CORS(server)
 
 @server.route('/colorize', methods=['POST'])
 def colorize():
+	print("SHTING OU ARE A SHITN")
     # # print(request.files , file=sys.stderr)
-	# base64image = request.json['image']
-	file = request.files['image'].read() ## byte file
+	print()
+	file = request.json['image']
+	# file = request.files['image'].read() ## byte file
 
 	print("MADE IT HERE")
 	npimg = np.fromstring(file, np.uint8)

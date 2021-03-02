@@ -17,8 +17,10 @@ function App() {
   }
 
   const handleUploadToServer = async (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     const b64 = window.btoa(imageUpload.raw)
+    console.log(imageUpload.raw)
+    console.log(b64)
     const response = await colorizeImage(b64)
   }
   return (
