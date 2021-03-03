@@ -11,6 +11,7 @@ pillow = "*"
 numpy = "*"
 opencv-python = "*"
 flask-cors = "*"
+jsonpickle = "*"
 
 [requires]
 python_version = "3.8"
