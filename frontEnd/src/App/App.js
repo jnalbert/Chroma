@@ -22,6 +22,7 @@ function App() {
     console.log(imageUpload.raw)
     console.log(b64)
     const response = await colorizeImage(b64)
+    console.log(response.data)
   }
   return (
        
