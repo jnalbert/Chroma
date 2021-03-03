@@ -4,7 +4,7 @@ import './Upload.css'
 
 function Upload({updateImage, handleUploadToServer, imageUpload}) {
 
-    return (<div style={{display: "inline-flex", transform:  `translate(80px, -200px)`}}>
+    return (<div style={{display: "inline-flex", transform:  `translate(40%, -375%)`}}>
         <label htmlFor="uploadButton">       
               <h5  className="button" style={{verticalAlign:"middle"}}><span>Upload</span></h5>
         </label>
