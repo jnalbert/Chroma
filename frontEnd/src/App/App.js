@@ -21,6 +21,7 @@ function App() {
     var url = imageUpload.raw
     var b64 = btoa(url)
     const response = await colorizeImage(b64)
+    console.log(response.data)
   }
   return (
        

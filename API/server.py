@@ -8,13 +8,15 @@ import base64
 
 
 server = Flask(__name__)
-cors = CORS(server)
+cors = CORS(server, resources={r"*": {"origins": "*"}})
 
-@server.route('/colorize', methods=['POST'])
+
+@server.route('/colorize', methods=["GET",'POST'])
 def colorize():
 	print("SHTING OU ARE A SHITN")
     # # print(request.files , file=sys.stderr)
-	print()
+	print(request.get_json())
+
 	file = request.json['image']
 	# file = request.files['image'].read() ## byte file
 
@@ -32,5 +34,12 @@ def colorize():
 	return jsonify({'status':str(img_base64)})
 
 
+@server.route('/test', methods=['GET', "POST"])
+def test():
+	print("MADE IT HERE")
+	return jsonify({"status": "test"}), 200
+
+
 if __name__ == '__main__':
     server.run(debug=True)
+
