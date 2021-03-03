@@ -2,19 +2,23 @@ import React from "react"
 import './Upload.css'
 
 
-function Upload({updateImage, handleUploadToServer, imageUpload}) {
+function Upload({updateImage, handleUploadToServer, setInputRef}) {
 
-    return (<div style={{display: "inline-flex", transform:  `translate(80px, -200px)`}}>
+    return (<div style={{display: "inline-flex", transform:  `translate(40%, -375%)`}}>
         <label htmlFor="uploadButton">       
               <h5  className="button" style={{verticalAlign:"middle"}}><span>Upload</span></h5>
         </label>
-        <input
-          type="file"
-          id="uploadButton"
-          style={{ display: "none" }}
-          onChange={updateImage}
-        />
-        <br />
+        <form >
+          <input
+            ref={(ref => {setInputRef(ref)})}
+            type="file"
+            id="uploadButton"
+            style={{ display: "none" }}
+            onChange={updateImage}
+          />
+          <br />
+        </form>
+        
         <button onClick={handleUploadToServer} className="startButton" style={{verticalAlign:"middle"}}><span>Colorize</span></button>
       </div>)
 
