@@ -9,7 +9,7 @@ async function colorizeImage(imageString) {
             "Content-Type": 'multipart/form-data'
         },
         data: {
-            'image': imageString
+            image: imageString
         }
       });
     return response
