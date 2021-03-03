@@ -37,7 +37,9 @@ def colorize():
 @server.route('/test', methods=['GET', "POST"])
 def test():
 	print("MADE IT HERE")
-	return jsonify({"status": "test"}), 200
+	data = request.get_json()
+	print(data)
+	return jsonify(data), 200
 
 
 if __name__ == '__main__':
