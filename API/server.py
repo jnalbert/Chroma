@@ -15,22 +15,22 @@ cors = CORS(server, resources={r"*": {"origins": "*"}})
 def colorize():
 	print("SHTING OU ARE A SHITN")
     # # print(request.files , file=sys.stderr)
-	print(request.get_json())
 
-	file = request.json['image']
-	# file = request.files['image'].read() ## byte file
+
+	
+	file = request.files['file'].read() ## byte file
 
 	print("MADE IT HERE")
 	npimg = np.fromstring(file, np.uint8)
 	img = cv2.imdecode(npimg,cv2.IMREAD_COLOR)
-	
+	print("NOW WE ARE GETTING SOMEWHERE")
 
 	img = Image.fromarray(img.astype("uint8"))
 	rawBytes = io.BytesIO()
 	img.save(rawBytes, "JPEG")
 	rawBytes.seek(0)
 	img_base64 = base64.b64encode(rawBytes.read())
-	print("Made it here")
+	print("WOW THE END")
 	return jsonify({'status':str(img_base64)})
 
 
