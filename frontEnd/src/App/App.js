@@ -13,8 +13,11 @@ function App() {
   const [uploadInputRef, setUploadInputRef] = useState()
 
   const updateImage = (e) => {
-    setImageUpload({  preview: URL.createObjectURL(e.target.files[0]),
-                raw: e.target.files[0]})
+    try {
+      setImageUpload({  preview: URL.createObjectURL(e.target.files[0]),
+        raw: e.target.files[0]})
+    } catch (err) {return null}
+    
   }
 
   const handleUploadToServer = async (e) => {
@@ -23,7 +26,13 @@ function App() {
     image.append('file', uploadInputRef.files[0])
   
     const response = await colorizeImage(image)
-    console.log(response.data)
+  
+
+    const bytestring = response.data['imageData']
+		const imageURL = bytestring.split('\'')[1]
+  
+		// imagebox.attr('src' , 'data:image/jpeg;base64,'+image)
+    setImageDownload({preview: "data:image/jpeg;base64," + imageURL, raw: ""})
   }
 
   const setInputRef = (ref) => {
