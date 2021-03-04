@@ -3,6 +3,7 @@ from PIL import Image
 from flask_cors import CORS, cross_origin
 import os , io , sys
 import numpy as np 
+from numpy import random
 import cv2
 import base64
 
@@ -24,22 +25,28 @@ def colorize():
 	npimg = np.fromstring(file, np.uint8)
 	img = cv2.imdecode(npimg,cv2.IMREAD_COLOR)
 	print("NOW WE ARE GETTING SOMEWHERE")
+	img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
+	
+	if (random.rand() > 0.1):
+    	img_rgb = cv2.imread('./guyfieri.jpg')
+		img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+		img = np.array(img)
 	img = Image.fromarray(img.astype("uint8"))
 	rawBytes = io.BytesIO()
 	img.save(rawBytes, "JPEG")
 	rawBytes.seek(0)
 	img_base64 = base64.b64encode(rawBytes.read())
 	print("WOW THE END")
-	return jsonify({'status':str(img_base64)})
+	return jsonify({'imageData':str(img_base64)})
 
 
-@server.route('/test', methods=['GET', "POST"])
-def test():
-	print("MADE IT HERE")
-	data = request.get_json()
-	print(data)
-	return jsonify(data), 200
+# @server.route('/test', methods=['GET', "POST"])
+# def test():
+# 	print("MADE IT HERE")
+# 	data = request.get_json()
+# 	print(data)
+# 	return jsonify(data), 200
 
 
 if __name__ == '__main__':
