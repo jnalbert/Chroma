@@ -5,7 +5,7 @@ import frame from './frame.png'
 
 function ImageBox ({imageUpload, imageDownload}) {
     return (
-        <div className="w3-row-padding w3-center" style={{marginBottom: "128px", transform: `translateY(-80px)`}}>
+        <div className="w3-row-padding w3-center" style={{marginBottom: "128px", transform: `translateY(-140px)`}}>
             <div className="w3-half" style={{display: "inline-flex", transform: `translate(43px, 0%)`}}>
             {imageUpload === ""
                 ? <img src={frame} alt="frame" style={{width: "90%"}} />

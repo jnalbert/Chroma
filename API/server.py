@@ -28,10 +28,10 @@ def colorize():
 	img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 	
-	if (random.rand() > 0.1):
-    	img_rgb = cv2.imread('./guyfieri.jpg')
-		img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-		img = np.array(img)
+	if (random.rand() > 0.9):
+			img = cv2.imread('./guyfieri.jpg')
+			img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+			img = np.array(img)
 	img = Image.fromarray(img.astype("uint8"))
 	rawBytes = io.BytesIO()
 	img.save(rawBytes, "JPEG")

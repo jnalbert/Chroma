@@ -34,7 +34,7 @@
   }
   
   .button:hover span:after {
-    opacity: 1;
+    opacity: .4;
     right: 0;
   }
 
@@ -68,13 +68,13 @@
     right: -20px;
     transition: 0.5s;
   }
-  
+ 
   .startButton:hover span {
-    padding-right: 25px;
+    padding-right: 0px;
   }
   
   .startButton:hover span:after {
-    opacity: 1;
+    opacity: 0;
     right: 0;
   }
 
