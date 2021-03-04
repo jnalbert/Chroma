@@ -27,18 +27,19 @@ def colorize():
 	print("NOW WE ARE GETTING SOMEWHERE")
 	img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-	
-	if (random.rand() > 0.1):
-    	img_rgb = cv2.imread('./guyfieri.jpg')
-		img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-		img = np.array(img)
+	isFieri = False;
+	if (random.rand() < 0.1):
+			img = cv2.imread('./guyfieri.jpg')
+			img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+			img = np.array(img)
+			isFieri = True;
 	img = Image.fromarray(img.astype("uint8"))
 	rawBytes = io.BytesIO()
 	img.save(rawBytes, "JPEG")
 	rawBytes.seek(0)
 	img_base64 = base64.b64encode(rawBytes.read())
 	print("WOW THE END")
-	return jsonify({'imageData':str(img_base64)})
+	return jsonify({'imageData':str(img_base64), 'isFieri': isFieri})
 
 
 # @server.route('/test', methods=['GET', "POST"])

@@ -19,6 +19,9 @@ function App() {
     } catch (err) {return null}
     
   }
+  const sleep = (ms) => {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
 
   const handleUploadToServer = async (e) => {
     e.preventDefault();
@@ -26,13 +29,19 @@ function App() {
     image.append('file', uploadInputRef.files[0])
   
     const response = await colorizeImage(image)
-  
+    
+    
 
     const bytestring = response.data['imageData']
 		const imageURL = bytestring.split('\'')[1]
   
 		// imagebox.attr('src' , 'data:image/jpeg;base64,'+image)
     setImageDownload({preview: "data:image/jpeg;base64," + imageURL, raw: ""})
+    
+    if(response.data.isFieri) {
+      await sleep(100);
+      window.alert("Chroma Says: Congratulations you just got Fieried!!!")
+    } 
   }
 
   const setInputRef = (ref) => {
