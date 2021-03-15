@@ -3,3 +3,24 @@
         height: 400px;
         object-fit: contain;
 }
+
+.img-frame1 .img-frame2{
+        object-fit:initial;
+        /* width: 400px; */
+}
+
+.w3-half {
+        display:inline-flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        /* max-height: 20px; */
+        
+}
+
+.img-display1, .img-display2 {
+        padding: 20px;
+        /* height: 400px */
+        /* object-fit: contain; */
+}
