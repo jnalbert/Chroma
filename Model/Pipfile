@@ -8,13 +8,14 @@ verify_ssl = true
 [packages]
 ipykernel = "*"
 numpy = "*"
-tensorflow = "*"
 pip = "*"
 matplotlib = "*"
 opencv-python = "*"
 sklearn = "*"
 scikit-image = "*"
 jupyter = "*"
+install = "*"
+tensorflow = "*"
 
 [requires]
 python_version = "3.8"
