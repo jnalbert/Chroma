@@ -1,8 +1,13 @@
-import React from "react"
+
 import './Upload.css'
 
+interface uploadProps {
+  updateImage: any;
+  handleUploadToServer: any;
+  setInputRef: any;
+}
 
-function Upload({updateImage, handleUploadToServer, setInputRef}) {
+function Upload({updateImage, handleUploadToServer, setInputRef}: uploadProps) {
 
     return (<div style={{display: "inline-flex", transform:  `translate(40%, -487%)`}}>
         <label htmlFor="uploadButton">       
@@ -10,7 +15,7 @@ function Upload({updateImage, handleUploadToServer, setInputRef}) {
         </label>
         <form >
           <input
-            ref={(ref => {setInputRef(ref)})}
+            ref={((ref) => {setInputRef(ref)})}
             type="file"
             id="uploadButton"
             style={{ display: "none" }}

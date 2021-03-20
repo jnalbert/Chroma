@@ -1,5 +1,4 @@
-
-const axios = require('axios')
+const axios = require('axios');
 
 async function colorizeImage(imageData) {
     // const data = JSON.stringify(imageData)

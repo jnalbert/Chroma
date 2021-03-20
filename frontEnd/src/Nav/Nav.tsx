@@ -1,7 +1,7 @@
-import React from 'react'
+
 import '../App/App.css'
 
-function Nav(props) {
+function Nav() {
     return (
         <div style={{transform: `translateY(-165px)`}} className="w3-content">
             <header className="w3-panel w3-center w3-opacity">
