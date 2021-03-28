@@ -1,9 +1,12 @@
 const axios = require('axios');
 
+const baseURL = 'http://192.168.1.74:5000';
+
 async function colorizeImage(imageData) {
     // const data = JSON.stringify(imageData)
 
-    const response = axios.post('http://127.0.0.1:5000/colorize', imageData, {
+
+    const response = axios.post(`${baseURL}/colorize`, imageData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
