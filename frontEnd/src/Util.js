@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const baseURL = 'http://192.168.1.74:5000';
+const baseURL = 'http://localhost:5000';
 
 async function colorizeImage(imageData) {
     // const data = JSON.stringify(imageData)
