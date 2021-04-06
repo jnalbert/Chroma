@@ -9,7 +9,7 @@ interface uploadProps {
 
 function Upload({updateImage, handleUploadToServer, setInputRef}: uploadProps) {
 
-    return (<div style={{display: "inline-flex", transform:  `translate(40%, -487%)`}}>
+    return (<div style={{display: "inline-flex", transform:  `translate(40%, -420%)`}}>
         <label htmlFor="uploadButton">       
               <h5  className="button" style={{verticalAlign:"middle"}}><span>Upload</span></h5>
         </label>
